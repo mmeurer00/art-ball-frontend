@@ -15,8 +15,6 @@ body {
   font-style: normal;
   line-height: 211px;
   color: #3e6bc1;
-  width: 1000px;
-  height: 469.42px;
   font-weight: bold;
   font-size: 50px;
   filter: drop-shadow(6px 4px 8px rgba(0, 0, 0, 0.25));
@@ -31,7 +29,7 @@ body {
   margin: auto;
   position: relative;
   background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-  top: -160px;
+  top: -60px;
 }
 
 .snowglobe:hover {
