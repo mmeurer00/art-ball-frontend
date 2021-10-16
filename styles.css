@@ -2,19 +2,26 @@ body {
   background-color: #c4c4c4;
 }
 
-h1 {
+.container {
+  max-width: 1200px;
+  min-width: 350px;
+  background-color: #c4c4c4;
+  display: block;
+  margin: auto;
+}
+
+.title {
   font-family: Helvetica;
   font-style: normal;
   line-height: 211px;
   color: #3e6bc1;
-  width: 3253px;
+  width: 1000px;
   height: 469.42px;
   font-weight: bold;
-  font-size: 70px;
+  font-size: 50px;
   filter: drop-shadow(6px 4px 8px rgba(0, 0, 0, 0.25));
-}
- {
-  background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  margin: auto;
+  text-align: center;
 }
 
 .snowglobe {
@@ -24,6 +31,7 @@ h1 {
   margin: auto;
   position: relative;
   background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  top: -160px;
 }
 
 .snowglobe:hover {
