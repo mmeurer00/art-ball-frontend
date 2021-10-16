@@ -15,7 +15,12 @@ class ArtBallAdapter {
             arts.forEach(activity => {
                 const act = new Art(activity)
                 act.addToDom()
+                
             })
+
+            // .then(arts=> {
+            //     const name = fileName(arts)
+            //     })
             
         })
     }
