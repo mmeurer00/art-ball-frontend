@@ -2,22 +2,48 @@ body {
   background-color: #c4c4c4;
 }
 
-h1 {
-  position: absolute;
-  width: 57.43px;
-  height: 190.58px;
-
+.wavy {
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: 900;
-  font-size: 80px;
   line-height: 211px;
+  color: #3e6bc1;
+  width: 3253px;
+  height: 469.42px;
+  filter: drop-shadow(6px 4px 8px rgba(0, 0, 0, 0.25));
+}
+
+.wavy span {
+}
+
+.w {
+  position: absolute;
+  width: 160.31px;
+  height: 201.78px;
+
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 207px;
 
   color: #3e6bc1;
 
-  transform: matrix(0.98, -0.21, 0.22, 0.98, 0, 0);
-  width: 3253px;
-  height: 469.42px;
+  transform: matrix(0.86, 0.57, -0.48, 0.84, 0, 0);
+}
 
-  filter: drop-shadow(6px 4px 8px rgba(0, 0, 0, 0.25));
+.h {
+  position: absolute;
+  width: 103.36px;
+  height: 204.11px;
+
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 207px;
+  left: 30px;
+
+  color: #3e6bc1;
+
+  transform: matrix(0.95, 0.37, -0.31, 0.93, 0, 0);
 }
