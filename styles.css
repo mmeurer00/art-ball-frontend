@@ -1,1 +1,23 @@
+body {
+  background-color: #c4c4c4;
+}
 
+h1 {
+  position: absolute;
+  width: 57.43px;
+  height: 190.58px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 180px;
+  line-height: 211px;
+
+  color: #3e6bc1;
+
+  transform: matrix(0.98, -0.21, 0.22, 0.98, 0, 0);
+  width: 3253px;
+  height: 469.42px;
+
+  filter: drop-shadow(6px 4px 8px rgba(0, 0, 0, 0.25));
+}
