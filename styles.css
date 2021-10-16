@@ -13,7 +13,7 @@ body {
 .title {
   font-family: Helvetica;
   font-style: normal;
-  line-height: 211px;
+  padding: 20px;
   color: #3e6bc1;
   font-weight: bold;
   font-size: 50px;
@@ -29,7 +29,6 @@ body {
   margin: auto;
   position: relative;
   background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-  top: -60px;
 }
 
 .snowglobe:hover {
