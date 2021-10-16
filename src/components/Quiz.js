@@ -74,6 +74,58 @@ const quizData = [
   ];
 
 
-class Quiz {
+  // here is the quiz class i'd made
+  class Quiz {
 
-}
+
+    static makeQuiz(e){
+  
+      let familyA = false;
+      let musicalA = true;
+      let distanceA = ""
+      let priceA = ""
+      let moodA = []
+      let categoryA = []
+     
+      if (e.target[0].checked === true) familyA = true;
+      if (e.target[4].checked === true) musicalA = false;
+  
+      if (e.target[5].checked) {
+        distanceA = e.target[5].value
+      } else if (e.target[6].checked) {
+        distanceA = e.target[6].value
+      } else {
+        distanceA = e.target[7].value
+      }
+  
+      for (let i = 8; i < 13; i++){
+        e.target[i]
+        if (e.target[i].checked === true){
+          priceA = parseInt(e.target[i].value)
+        }
+      }
+  
+      for (let i = 14; i < e.target.length; i++){
+        e.target[i]
+        if (e.target[i].checked === true && e.target[i].name === "category"){
+          categoryA.push(parseInt(e.target[i].value))
+        } else if (e.target[i].checked === true && e.target[i].name === "mood"){
+          moodA.push(parseInt(e.target[i].value))
+        }
+      }
+  
+    const quizAnswers = {
+        family: familyA,
+        musical: musicalA,
+        distance: distanceA,
+        price: priceA,
+        category: categoryA,
+        mood: moodA
+    }
+  
+    return quizAnswers;
+    
+    }
+  }
+  
+  
