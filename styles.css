@@ -437,10 +437,8 @@ body {
 }
 
 .power-button {
-  margin: auto;
-  padding-left: 400px;
-  padding-right: 400px;
-  position: sticky;
+  position: relative;
+  left: 50%;
 }
 
 button {
@@ -453,5 +451,4 @@ button {
   font-family: "Klee One", cursive;
   font-size: 17px;
   text-decoration: none;
-  margin: auto;
 }
