@@ -19,7 +19,7 @@ class ArtBallAdapter {
             })
 
             // .then(arts=> {
-            //     const name = fileName(arts)
+            //     const name = new fileName(arts)
             //     })
             
         })
