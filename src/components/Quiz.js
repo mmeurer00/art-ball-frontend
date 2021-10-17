@@ -91,6 +91,8 @@ const c_text = document.getElementById("c_text");
 const d_text = document.getElementById("d_text");
 const submitBtn = document.getElementById("submit");
 
+
+
 // ---------------------------------- DOM Elements End ------------------------------------
 
 let currentQuiz = 0;
@@ -152,36 +154,33 @@ submitBtn.addEventListener("click", () => {
                     allActivities = a
 
                 }
-                else {
-                    const b = allActivities.filter(activity => activity.family == false)
-                    allActivities = b
-                    
-                }
+
                 console.log(allActivities)
             }
             //--------------------------- PRICE LOGIC ----------------------------------
             if ("price" == quizData[currentQuiz].key){
 
                 if (answer == ('a' || 'b')){
-                    const c =  allActivities.filter(activity => activity.price == (0 || 1))
+                    const c =  allActivities.filter(activity => activity.price <= 2 )
                     allActivities = c
                 }
                 if (answer == ('c')){
-                    const d = allActivities.filter(activity => activity.price == (2 || 3))
+                    const d = allActivities.filter(activity => activity.price <= 3 )
                     allActivities = d
                 }
                 if (answer == ('d')){
-                    const e = allActivities.filter( activity => activity.price == (4 || 5))
+                    const e = allActivities.filter( activity => activity.price <= 5)
                     allActivities = e
                 }
                 //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
-                if (allActivities.length >= 2){
+                if (allActivities.length <= 2){
                     currentQuiz = 5
                 }
+                console.log(allActivities)
             }
             //------------------------------ CATEGORY LOGIC ---------------------------------------
             if ("category" == quizData[currentQuiz].key){
-                
+              
                 if (answer == ('a')){
                     const f = allActivities.filter(activity => (activity.category_id == 1 || 5))
                     allActivities = f
@@ -199,7 +198,7 @@ submitBtn.addEventListener("click", () => {
                     allActivities = i
                 }
                 //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
-                if (allActivities.length >= 2){
+                if (allActivities.length <= 2){
                     currentQuiz = 5
                 }
                 console.log(allActivities)
@@ -216,7 +215,7 @@ submitBtn.addEventListener("click", () => {
                     allActivities = k
                 }
                 //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
-                if (allActivities.length >= 2){
+                if (allActivities.length <= 2){
                     currentQuiz = 5
                 }
                 console.log(allActivities)
@@ -240,10 +239,11 @@ submitBtn.addEventListener("click", () => {
                     allActivities = o
                 }
                 //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
-                if (allActivities.length >= 2){
+                if (allActivities.length <= 2){
                     currentQuiz = 5
                 }
             }
+            console.log(allActivities)
         }
     }
     currentQuiz++
@@ -254,9 +254,18 @@ submitBtn.addEventListener("click", () => {
         console.log(allActivities)
         const rand = allActivities[allActivities.length * Math.random() | 0]
         console.log(rand)
-        quiz.innerHTML = 
-        `<h2>Based on your answers ${rand.name} would be a fantastic way to satisy your artistic cravings today!</h2> 
-        
-        <button onclick="location.reload()">Reload</button>`;
+            if (rand.name) {
+              quiz.innerHTML = 
+            `<h2>Based on your answers ${rand.name} would be a fantastic way to satisy your artistic cravings today!</h2> 
+            
+            <button onclick="location.reload()">Reload</button>`;
+        } else {
+          quiz.innerHTML = 
+            `<h2>Based on your answers, it might be better if you just cried alone in Central Park for a few hours</h2> 
+            
+            <button onclick="location.reload()">Reload</button>`;
+        }
     }
+        
 })
+
