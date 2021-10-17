@@ -326,9 +326,6 @@ body {
 }
 
 .stand-curved {
-  width: 437.98px;
-  height: 159.84px;
-  fill: Solid #939393;
 }
 
 .stand-curved-wrap {
@@ -436,12 +433,12 @@ body {
 
 button {
   text-align: center;
-  background-color: #9982b6;
+  background-color: #0039a6;
   border-radius: 5px;
-  border: 1px solid #630363;
+  border: 1px solid #023086;
   cursor: pointer;
   color: #ffffff;
-  font-family: "Klee One", cursive;
+  font-family: Helvetica;
   font-size: 17px;
   text-decoration: none;
 }
