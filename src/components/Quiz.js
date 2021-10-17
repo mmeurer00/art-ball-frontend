@@ -17,7 +17,7 @@ const quizData = [
     key: "price",
   },
   {
-    question: "What type of art do you fancy?",
+    question: "What type of art do you fancy you?",
     // theater 1, visual art 2, music 3, arch/design 4, film 5
     a: "Theater",
     b: "Visual Art",
@@ -35,7 +35,7 @@ const quizData = [
   },
 
   {
-    question: 'What\'s the "vibe of the day"?',
+    question: "What's the vibe of the day?",
     // happy (1), moody (2), comedy(4), dancey(5), feel-something(3), culturey(6)
     a: "Sunshine & Smiles",
     b: "Trigger me/Kim K Crying",
@@ -123,10 +123,9 @@ function getSelected() {
   // console.log(answer)
 }
 
-// var colors = ["red",undefined,"","blue",null,"crap"];
-// // remove undefined, null, "" and any other crap
-// var cleanColors= _.without(colors,undefined,null,"","crap");
-// //cleanColors is now ["red","blue"];
+const modalContainer = document.querySelector(".modal-container");
+modalContainer.style.background =
+  "url('https://github.com/be-rahn/art-ball-frontend/blob/main/nycbackground1.PNG?raw=true')";
 
 submitBtn.addEventListener("click", () => {
   const answer = getSelected();
@@ -160,7 +159,7 @@ submitBtn.addEventListener("click", () => {
           allActivities = e;
         }
         //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
-        if (allActivities.length <= 2) {
+        if (allActivities.length <= 3) {
           currentQuiz = 5;
         }
         console.log(allActivities);
@@ -192,8 +191,12 @@ submitBtn.addEventListener("click", () => {
           allActivities = i;
         }
         //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
-        if (allActivities.length <= 2) {
+        if (allActivities.length <= 3) {
           currentQuiz = 5;
+        }
+        if (allActivities.length == 0) {
+          quiz.innerHTML = `<h3>Opps! Look's like you ran out of activities that fancy you, let's restart the quiz and try selecting alternative options.</h3> 
+                    <button onclick="location.reload()">Reload</button>`;
         }
         console.log(allActivities);
       }
@@ -204,15 +207,20 @@ submitBtn.addEventListener("click", () => {
             (activity) => activity.musical == true
           );
           allActivities = j;
-        } else {
+        }
+        if (answer == ("c" || "d")) {
           const k = allActivities.filter(
             (activity) => activity.musical == false
           );
           allActivities = k;
         }
         //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
-        if (allActivities.length <= 2) {
+        if (allActivities.length <= 3) {
           currentQuiz = 5;
+        }
+        if (allActivities.length == 0) {
+          quiz.innerHTML = `<h3>Opps! Look's like you ran out of activities that fancy you, let's restart the quiz and try selecting alternative options.</h3> 
+                    <button onclick="location.reload()">Reload</button>`;
         }
         console.log(allActivities);
       }
@@ -241,24 +249,33 @@ submitBtn.addEventListener("click", () => {
           allActivities = o;
         }
         //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
-        if (allActivities.length <= 2) {
+        if (allActivities.length <= 4) {
           currentQuiz = 5;
+        }
+        if (allActivities.length == 0) {
+          quiz.innerHTML = `<h3>Opps! Look's like you ran out of activities that fancy you, let's restart the quiz and try selecting alternative options.</h3> 
+                    <button onclick="location.reload()">Reload</button>`;
         }
       }
       console.log(allActivities);
     }
   }
   currentQuiz++;
-  console.log(currentQuiz);
+  // console.log(currentQuiz)
   if (currentQuiz < quizData.length) {
     loadQuiz();
   } else {
-    console.log(allActivities);
+    // console.log(allActivities)
     const rand = allActivities[(allActivities.length * Math.random()) | 0];
-    console.log(rand);
+    // Sets the background image
+    const modalContainer = document.querySelector(".modal-container");
+    modalContainer.style.background =
+      "url('https://raw.githubusercontent.com/be-rahn/art-ball-frontend/main/metrocard.PNG')";
+    // console.log(rand)
     if (rand.name) {
-      quiz.innerHTML = `<h2>Based on your answers ${rand.name} would be a fantastic way to satisy your artistic cravings today!</h2> 
-            
+      quiz.innerHTML = `<h3>Based on your answers ${rand.name} would be a fantastic way to satisfy your artistic cravings today!</h3> 
+             <a href="${rand.url}">Event Info</a>
+             <br></br>
             <button onclick="location.reload()">Reload</button>`;
     } else {
       quiz.innerHTML = `<h2>Based on your answers, it might be better if you just cried alone in Central Park for a few hours</h2> 
