@@ -210,12 +210,12 @@ submitBtn.addEventListener("click", () => {
                     allActivities = j
                     
                 }
-                else {
+                if (answer == ('c' || 'd')){
                     const k = allActivities.filter(activity => activity.musical == false)
                     allActivities = k
                 }
                 //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
-                if (allActivities.length <= 2){
+                if (allActivities.length <= 2) {
                     currentQuiz = 5
                 }
                 console.log(allActivities)
@@ -247,17 +247,20 @@ submitBtn.addEventListener("click", () => {
         }
     }
     currentQuiz++
-    console.log(currentQuiz)
+    // console.log(currentQuiz)
     if (currentQuiz < quizData.length) {
         loadQuiz();
     } else {
-        console.log(allActivities)
+        // console.log(allActivities)
         const rand = allActivities[allActivities.length * Math.random() | 0]
-        console.log(rand)
+        // Sets the background image
+        const modalContainer = document.querySelector(".modal-container")
+        modalContainer.style.background = "url('https://raw.githubusercontent.com/be-rahn/art-ball-frontend/main/metrocard.PNG')";
+        // console.log(rand)
             if (rand.name) {
               quiz.innerHTML = 
-            `<h2>Based on your answers ${rand.name} would be a fantastic way to satisy your artistic cravings today!</h2> 
-            
+            `<h3>Based on your answers ${rand.name} would be a fantastic way to satisy your artistic cravings today!</h3> 
+          
             <button onclick="location.reload()">Reload</button>`;
         } else {
           quiz.innerHTML = 
