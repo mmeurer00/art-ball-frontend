@@ -3,11 +3,13 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   min-width: 350px;
-  background-color: #c4c4c4;
+  background-image: url("nycbackground1.PNG");
   display: block;
   margin: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .title {
@@ -324,9 +326,6 @@ body {
 }
 
 .stand-curved {
-  width: 437.98px;
-  height: 159.84px;
-  fill: Solid #939393;
 }
 
 .stand-curved-wrap {
@@ -426,32 +425,59 @@ body {
     -o-origin-transform: translate(0px);
   }
 }
-.build-bot-left {
-  position: absolute;
-  width: 30px;
-  height: 40px;
-
-  background: #a4a196;
-  border: 2.9999px solid #9e9e8d;
-  box-shadow: 7px 4px 9px rgba(0, 0, 0, 0.25);
-}
 
 .power-button {
-  margin: auto;
-  padding-left: 400px;
-  padding-right: 400px;
-  position: sticky;
+  position: relative;
+  left: 45%;
 }
 
 button {
   text-align: center;
-  background-color: #9982b6;
+  background-color: #0039a6;
   border-radius: 5px;
-  border: 1px solid #630363;
+  border: 1px solid #023086;
   cursor: pointer;
   color: #ffffff;
-  font-family: "Klee One", cursive;
+  font-family: Helvetica;
   font-size: 17px;
   text-decoration: none;
-  margin: auto;
+}
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+}
+
+.moving-train {
+  position: absolute;
+  width: 100px;
+  z-index: 10;
+  left: 18%;
+  animation: moveBus 9s ease-in-out forwards;
+}
+
+.moving-train2 {
+  position: absolute;
+  width: 100px;
+  z-index: 10;
+  left: -10%;
+  animation: moveBus2 4s ease-in-out 5.5s forwards;
+}
+
+@keyframes moveBus {
+  0% {
+    left: 18%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+@keyframes moveBus2 {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 48%;
+  }
 }

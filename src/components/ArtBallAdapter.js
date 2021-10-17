@@ -1,6 +1,6 @@
 class ArtBallAdapter {
     
-    constructor(baseURL="http://127.0.0.1:3000"){
+    constructor(baseURL="https://ttny-backend-2021.herokuapp.com"){
         this.baseArtURL = `${baseURL}/arts`
         /* when creating a new adpater object, 
         this is setting up the URL for the user */
@@ -13,8 +13,8 @@ class ArtBallAdapter {
         //handles fetch promise/return JSON object
         .then(arts=> {
             arts.forEach(activity => {
-                const act = new Art(activity)
-                act.addToDom()
+                const act = new Quiz(activity)
+                return act
                 
             })
 
