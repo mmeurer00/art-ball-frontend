@@ -428,19 +428,21 @@ body {
 
 .power-button {
   position: relative;
-  left: 45%;
+  left: 32%;
+  bottom: 98px;
 }
 
 button {
-  text-align: center;
-  background-color: #0039a6;
-  border-radius: 5px;
-  border: 1px solid #023086;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Helvetica;
-  font-size: 17px;
-  text-decoration: none;
+  border: solid 4px transparent;
+  padding: 4px;
+  width: 150px;
+  height: 60px;
+  border-radius: 40px;
+  box-shadow: inset 0 1px 1px rgba(#f7f7f7, 0.875),
+    inset 0 -1px 1px rgba(#bbb, 0.75);
+  background: linear-gradient(#fdfdfe, #9ea1a6) content-box,
+    linear-gradient(#fff, #9c9fa4) padding-box,
+    linear-gradient(#eee, #a4a7ab) border-box;
 }
 
 .wrapper {
@@ -478,6 +480,6 @@ button {
     left: -10%;
   }
   100% {
-    left: 48%;
+    left: 88%;
   }
 }
