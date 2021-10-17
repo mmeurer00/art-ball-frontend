@@ -141,12 +141,12 @@ submitBtn.addEventListener("click", () => {
     if (answer) {
        
         if (allActivities.length == 1){
-            currentQuiz = 6
+            currentQuiz = 5
         }
         else {
             //--------------------------- FAMILY BOOLEAN LOGIC ----------------------------------
             if ("family" == quizData[currentQuiz].key){
-                console.log(answer)
+                // console.log(answer)
                 if (answer == ('a' || 'c')){
                     const a = allActivities.filter(activity => activity.family == true)
                     allActivities = a
@@ -161,27 +161,29 @@ submitBtn.addEventListener("click", () => {
             }
             //--------------------------- PRICE LOGIC ----------------------------------
             if ("price" == quizData[currentQuiz].key){
-                console.log(answer)
+
                 if (answer == ('a' || 'b')){
-                    const c =  allActivities.filter(activity => activity.price !== (0 || 1))
+                    const c =  allActivities.filter(activity => activity.price == (0 || 1))
                     allActivities = c
                 }
                 if (answer == ('c')){
-                    const d = allActivities.filter(activity => activity.price !== (2 || 3))
+                    const d = allActivities.filter(activity => activity.price == (2 || 3))
                     allActivities = d
                 }
                 if (answer == ('d')){
-                    const e = allActivities.filter( activity => activity.price !== (4 || 5))
+                    const e = allActivities.filter( activity => activity.price == (4 || 5))
                     allActivities = e
                 }
-                console.log(allActivities)
+                //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
+                if (allActivities.length >= 2){
+                    currentQuiz = 5
+                }
             }
             //------------------------------ CATEGORY LOGIC ---------------------------------------
             if ("category" == quizData[currentQuiz].key){
-                // console.log(answer)
-                // console.log("test",allActivities)
+                
                 if (answer == ('a')){
-                    const f = allActivities.filter(activity => activity.category_id == (1 || 5))
+                    const f = allActivities.filter(activity => (activity.category_id == 1 || 5))
                     allActivities = f
                 }
                 if (answer == ('b')){
@@ -196,6 +198,10 @@ submitBtn.addEventListener("click", () => {
                     const i = allActivities.filter(activity => activity.category_id == 4)
                     allActivities = i
                 }
+                //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
+                if (allActivities.length >= 2){
+                    currentQuiz = 5
+                }
                 console.log(allActivities)
             }
             if ("musical" == quizData[currentQuiz].key){
@@ -209,33 +215,43 @@ submitBtn.addEventListener("click", () => {
                     const k = allActivities.filter(activity => activity.musical == false)
                     allActivities = k
                 }
+                //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
+                if (allActivities.length >= 2){
+                    currentQuiz = 5
+                }
+                console.log(allActivities)
             }
             if ("mood" == quizData[currentQuiz].key){
                 console.log(answer)
-                if (answer == ('a')){
+                if (answer == 'a'){
                     const l = allActivities.filter(activity => activity.mood_id == (1 || 4))
                     allActivities = l
                 }
-                if (answer == ('b')){
+                if (answer == 'b'){
                     const m = allActivities.filter(activity => activity.mood_id == ( 2 || 3))
                     allActivities = m
                 }
-                if (answer == ('c')){
+                if (answer == 'c'){
                     const n = allActivities.filter(activity => activity.mood_id == 6)
                     allActivities = n
                 }
-                if (answer == ('d')){
+                if (answer == 'd'){
                     const o = allActivities.filter(activity => activity.mood_id == (4 || 5))
                     allActivities = o
+                }
+                //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
+                if (allActivities.length >= 2){
+                    currentQuiz = 5
                 }
             }
         }
     }
     currentQuiz++
+    console.log(currentQuiz)
     if (currentQuiz < quizData.length) {
         loadQuiz();
     } else {
-        const random = Math.floor(Math.random() * allActivities.length);
+        console.log(allActivities)
         const rand = allActivities[allActivities.length * Math.random() | 0]
         console.log(rand)
         quiz.innerHTML = 
@@ -243,5 +259,4 @@ submitBtn.addEventListener("click", () => {
         
         <button onclick="location.reload()">Reload</button>`;
     }
-    console.log("load")
 })
