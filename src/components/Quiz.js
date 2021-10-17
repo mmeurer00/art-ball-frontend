@@ -132,10 +132,8 @@ function getSelected() {
     // console.log(answer)
 }
 
-// var colors = ["red",undefined,"","blue",null,"crap"];
-// // remove undefined, null, "" and any other crap
-// var cleanColors= _.without(colors,undefined,null,"","crap");
-// //cleanColors is now ["red","blue"];
+const modalContainer = document.querySelector(".modal-container")
+modalContainer.style.background = "url('https://github.com/be-rahn/art-ball-frontend/blob/main/nycbackground1.PNG?raw=true')";
 
 submitBtn.addEventListener("click", () => {
     const answer = getSelected();
@@ -275,7 +273,8 @@ submitBtn.addEventListener("click", () => {
             if (rand.name) {
               quiz.innerHTML = 
             `<h3>Based on your answers ${rand.name} would be a fantastic way to satisy your artistic cravings today!</h3> 
-          
+             <a href="${rand.url}">Event Info</a>
+             <br></br>
             <button onclick="location.reload()">Reload</button>`;
         } else {
           quiz.innerHTML = 
