@@ -423,7 +423,7 @@ body {
 .power-button {
   position: relative;
   left: 32%;
-  bottom: 110px;
+  bottom: 130px;
 }
 
 button {
@@ -437,6 +437,8 @@ button {
   background: linear-gradient(#fdfdfe, #9ea1a6) content-box,
     linear-gradient(#fff, #9c9fa4) padding-box,
     linear-gradient(#eee, #a4a7ab) border-box;
+  font-size: medium;
+  font-weight: bold;
 }
 
 .wrapper {
