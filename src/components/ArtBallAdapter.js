@@ -13,8 +13,8 @@ class ArtBallAdapter {
         //handles fetch promise/return JSON object
         .then(arts=> {
             arts.forEach(activity => {
-                const act = new Art(activity)
-                act.addToDom()
+                const act = new Quiz(activity)
+                return act
                 
             })
 
