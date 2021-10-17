@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="stylesheets/modal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -74,8 +78,43 @@
             <div class="stand-curved"></div>
           </div>
         </div>
+        <!-------------------------------------------------->
+        <div class="modal-overlay">
+            <div class="modal-container">
+                <h3>
+                    <div class="quiz-container" id="quiz">
+                        <div class="quiz-header">
+                          <h2 id="question">Question Text</h2>
+                          <ul>
+                            <li>
+                              <input type="radio" id="a" name="answer" class="answer">
+                              <label id="a_text" for="a"></label>
+                            </li>
+                            <li>
+                              <input type="radio" id="b" name="answer" class="answer">
+                              <label id="b_text" for="b"></label>
+                            </li>
+                            <li>
+                              <input type="radio" id="c" name="answer" class="answer">
+                              <label id="c_text" for="c"></label>
+                            </li>
+                            <li>
+                              <input type="radio" id="d" name="answer" class="answer">
+                              <label id="d_text" for="d"></label>
+                            </li>
+                          </ul>
+                        </div>
+                        <button id="submit">Submit</button>
+                      </div>
+                  </div>
+                </h3>
+                <button class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <!------------------------------------------------------------->
         <div class="power-button">
-          <button id="button" class="btn modal-btn" >Click Here!🍎</button>
+          <button id="button" >Click Here!🍎</button>
+          <button class="modal-btn">modal test</button>
         </div>
         <div class="wrapper">
           <div class="moving-train">
@@ -87,7 +126,7 @@
         </div>
         <!---------- Quiz form --------->
         
-        <div class="quiz-container" id="quiz">
+        <!-- <div class="quiz-container" id="quiz">
             <div class="quiz-header">
               <h2 id="question">Question Text</h2>
               <ul>
@@ -111,12 +150,12 @@
             </div>
             <button id="submit">Submit</button>
           </div>
-      </div>
+      </div> -->
       
       
       <!---------- Quiz form --------->
-<!-- 
-        <div class="modal-overlay">
+
+        <!-- <div class="modal-overlay">
             <div class="modal-container">
                 <h3>
                     <div class="quiz-container" id="quiz">
@@ -149,11 +188,10 @@
             </div>
         </div> -->
 
-
-
     </div>
 
     <script type="text/javascript" src="src/components/Quiz.js" ></script>
+    <script type="text/javascript" src="src/Modal.js" ></script>
   </body>
 </html>
 
