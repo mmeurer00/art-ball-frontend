@@ -272,7 +272,7 @@ submitBtn.addEventListener("click", () => {
         // console.log(rand)
             if (rand.name) {
               quiz.innerHTML = 
-            `<h3>Based on your answers ${rand.name} would be a fantastic way to satisy your artistic cravings today!</h3> 
+            `<h3>Based on your answers ${rand.name} would be a fantastic way to satisfy your artistic cravings today!</h3> 
              <a href="${rand.url}">Event Info</a>
              <br></br>
             <button onclick="location.reload()">Reload</button>`;
