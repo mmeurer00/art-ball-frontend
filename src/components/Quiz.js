@@ -63,7 +63,7 @@ const quizData = [
 let allActivities = []
 
 const getArtActivities = () => {
-    fetch('http://127.0.0.1:3000/arts')
+    fetch('https://ttny-backend-2021.herokuapp.com/arts')
     // returns promise
     .then(r => r.json())
     //handles fetch promise/return JSON object
