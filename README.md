@@ -19,7 +19,7 @@ The frontend is entirely CSS, HTML, and JavaScript! The ArtGlobe API was built w
 + Frontend Repo: [link](https://github.com/mmeurer00/art-ball-frontend.git)
 
 ## Team 👯 
-Danielle and Brooke teamed up first, having previously hacked together. First time hacker, Zoe, joined the party next and helped conceptualize. Danielle created stunning figma designs, while Brooke brought the incredible snow globe and additional design to life. First time hacker, Maxine, joined on day 2! Zoe built the backend API and made a first pass at the forms and algorithms, but Maxine swoooped in, saved the day and got the questionairre up and running! The quiz logic and styling were all still being tweaked down til the final hour! 
+Danielle and Brooke teamed up first, having previously hacked together. First time hacker, Zoe, joined the party next and helped conceptualize. Danielle created stunning figma designs, while Brooke brought the incredible snow globe and additional design to life. First time hacker, Maxine, joined on day 2! Zoe built the backend API and made a first pass at the forms and algorithms, but Maxine swoooped in, saved the day and got the questionairre up and running!
 
 ## Challenges 🛑
 
