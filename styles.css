@@ -8,6 +8,8 @@ body {
   background-color: #c4c4c4;
   display: block;
   margin: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .title {
