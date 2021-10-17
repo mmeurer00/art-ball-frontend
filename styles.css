@@ -445,3 +445,42 @@ button {
   font-size: 17px;
   text-decoration: none;
 }
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+}
+
+.moving-train {
+  position: absolute;
+  width: 100px;
+  z-index: 10;
+  left: 18%;
+  animation: moveBus 9s ease-in-out forwards;
+}
+
+.moving-train2 {
+  position: absolute;
+  width: 100px;
+  z-index: 10;
+  left: -10%;
+  animation: moveBus2 4s ease-in-out 5.5s forwards;
+}
+
+@keyframes moveBus {
+  0% {
+    left: 18%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+@keyframes moveBus2 {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 18%;
+  }
+}
