@@ -35,7 +35,7 @@ Danielle and Brooke teamed up first, having previously hacked together. First ti
 
 + *Getting the button to sit over the snowglobe! It seems like the smallest thing, but it took me a while to figure out how to layer the divs so everything was where I needed it to be.* - **Brooke**
 
-+ "I am also very proud of my animations: the shaking globe, moving train and falling snow! It was really fun to animate the page." - **Brooke**
++ *I am also very proud of my animations: the shaking globe, moving train and falling snow! It was really fun to animate the page.* - **Brooke**
 
 + *This is going to sound crazy, but my proudest moment was submitting a pull request this morning that was a change to someone else's code! Working with other people in git scares the hell out of me and I finally feel like it's starting to make sense.* - **Zoe**
 
