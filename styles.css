@@ -5,7 +5,7 @@ body {
 .container {
   max-width: 1000px;
   min-width: 350px;
-  background-image: url("newyorkbackground.PNG");
+  background-image: url("nycbackground1.PNG");
   display: block;
   margin: auto;
   overflow-x: hidden;
@@ -481,6 +481,6 @@ button {
     left: -10%;
   }
   100% {
-    left: 18%;
+    left: 48%;
   }
 }
