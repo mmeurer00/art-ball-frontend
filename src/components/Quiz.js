@@ -20,7 +20,7 @@ const quizData = [
     },
     {
         question:
-          "What type of art do you fancy you?",
+          "What type of art do you fancy?",
           // theater 1, visual art 2, music 3, arch/design 4, film 5
         a: "Theater",
         b: "Visual Art",
