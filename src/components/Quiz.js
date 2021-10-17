@@ -173,7 +173,7 @@ submitBtn.addEventListener("click", () => {
                     allActivities = e
                 }
                 //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
-                if (allActivities.length <= 2){
+                if (allActivities.length <= 3){
                     currentQuiz = 5
                 }
                 console.log(allActivities)
@@ -198,7 +198,7 @@ submitBtn.addEventListener("click", () => {
                     allActivities = i
                 }
                 //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
-                if (allActivities.length <= 2){
+                if (allActivities.length <= 3){
                     currentQuiz = 5
                 }
                 console.log(allActivities)
@@ -215,7 +215,7 @@ submitBtn.addEventListener("click", () => {
                     allActivities = k
                 }
                 //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
-                if (allActivities.length <= 2) {
+                if (allActivities.length <= 3) {
                     currentQuiz = 5
                 }
                 console.log(allActivities)
@@ -239,7 +239,7 @@ submitBtn.addEventListener("click", () => {
                     allActivities = o
                 }
                 //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
-                if (allActivities.length <= 2){
+                if (allActivities.length <= 3){
                     currentQuiz = 5
                 }
             }
