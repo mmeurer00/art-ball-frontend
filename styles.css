@@ -428,7 +428,8 @@ body {
 
 .power-button {
   position: relative;
-  left: 45%;
+  left: 36%;
+  bottom: 98px;
 }
 
 button {
@@ -478,6 +479,6 @@ button {
     left: -10%;
   }
   100% {
-    left: 48%;
+    left: 88%;
   }
 }
