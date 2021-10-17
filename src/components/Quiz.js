@@ -20,7 +20,7 @@ const quizData = [
     },
     {
         question:
-          "What type of art fancies you?",
+          "What type of art do you fancy you?",
           // theater 1, visual art 2, music 3, arch/design 4, film 5
         a: "Theater",
         b: "Visual Art",
@@ -40,7 +40,7 @@ const quizData = [
   
     {
       question:
-        'What\'s the vibe of the day"?',
+        'What\'s the vibe of the day?',
         // happy (1), moody (2), comedy(4), dancey(5), feel-something(3), culturey(6)
       a: 'Sunshine & Smiles',
       b: 'Trigger me/Kim K Crying',
