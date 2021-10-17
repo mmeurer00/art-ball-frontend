@@ -201,6 +201,11 @@ submitBtn.addEventListener("click", () => {
                 if (allActivities.length <= 3){
                     currentQuiz = 5
                 }
+                if (allActivities.length == 0){
+                    quiz.innerHTML = 
+                    `<h3>Opps! Look's like you ran out of activities that fancy you, let's restart the quiz and try selecting alternative options.</h3> 
+                    <button onclick="location.reload()">Reload</button>`;
+                }
                 console.log(allActivities)
             }
             if ("musical" == quizData[currentQuiz].key){
@@ -217,6 +222,11 @@ submitBtn.addEventListener("click", () => {
                 //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
                 if (allActivities.length <= 3) {
                     currentQuiz = 5
+                }
+                if (allActivities.length == 0){
+                    quiz.innerHTML = 
+                    `<h3>Opps! Look's like you ran out of activities that fancy you, let's restart the quiz and try selecting alternative options.</h3> 
+                    <button onclick="location.reload()">Reload</button>`;
                 }
                 console.log(allActivities)
             }
@@ -239,8 +249,13 @@ submitBtn.addEventListener("click", () => {
                     allActivities = o
                 }
                 //------------------------------ ENDS EARLY FOR LOW RESULTS LOGIC ---------------------------------------
-                if (allActivities.length <= 3){
+                if (allActivities.length <= 4){
                     currentQuiz = 5
+                }
+                if (allActivities.length == 0){
+                    quiz.innerHTML = 
+                    `<h3>Opps! Look's like you ran out of activities that fancy you, let's restart the quiz and try selecting alternative options.</h3> 
+                    <button onclick="location.reload()">Reload</button>`;
                 }
             }
             console.log(allActivities)
